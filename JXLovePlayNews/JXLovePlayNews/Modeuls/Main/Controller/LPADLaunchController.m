@@ -51,7 +51,7 @@
 #pragma mark - 加载数据
 - (void)loadData
 {
-
+    [self showADImageWithURL:[NSURL URLWithString:@"https://gss0.bdstatic.com/94o3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D268%3Bg%3D0/sign=dd3eafa23e01213fcf3349da6cdc51ec/8b82b9014a90f60323a3073c3e12b31bb051edbe.jpg"]];
 }
 
 
@@ -70,6 +70,7 @@
 {
     NSString *timeLeaveStr = [NSString stringWithFormat:@"跳过 %ds",timeLeave];
     [_adLaunchView.skipBtn setTitle:timeLeaveStr forState:UIControlStateNormal];
+    
     _adLaunchView.skipBtn.hidden = NO;
 }
 

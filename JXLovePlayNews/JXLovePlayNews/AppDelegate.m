@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "LPTabBarController.h"
+#import "LPADLaunchController.h"
+#import <JPFPSStatus.h>
 
 @interface AppDelegate ()
 
@@ -19,7 +21,25 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     [self addMainWindow];
+    
+    [self addADLaunchController];
+    
+    
+#if defined(DEBUG)||defined(_DEBUG)
+    [[JPFPSStatus sharedInstance] open];
+#endif
+    
     return YES;
+}
+
+
+- (void)addADLaunchController
+{
+    UIViewController *rootViewController = self.window.rootViewController;
+    LPADLaunchController *launchController = [[LPADLaunchController alloc]init];
+    [rootViewController addChildViewController:launchController];
+    launchController.view.frame = rootViewController.view.frame;
+    [rootViewController.view addSubview:launchController.view];
 }
 
 - (void)addMainWindow
