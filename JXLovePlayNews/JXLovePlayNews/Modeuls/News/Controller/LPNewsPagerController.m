@@ -91,6 +91,7 @@
 
 - (NSString *)pagerController:(TYPagerController *)pagerController titleForIndex:(NSInteger)index
 {
+    
     NSDictionary *newsPageInfo = _newsPageInfos[index];
     NSString *title = [newsPageInfo objectForKey:@"title"];
     return title ? title : @"";
@@ -98,6 +99,8 @@
 
 - (UIViewController *)pagerController:(TYPagerController *)pagerController controllerForIndex:(NSInteger)index
 {
+    
+    
     NSDictionary *newsPageInfo = _newsPageInfos[index];
     LPNewsListController *newsVC = [[LPNewsListController alloc]init];
     newsVC.newsTopId = [newsPageInfo objectForKey:@"topId"];

@@ -42,6 +42,7 @@
 		04066A421F26F5680090DE0C /* LPNewsListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04066A411F26F5680090DE0C /* LPNewsListController.m */; };
 		04066A461F26F75B0090DE0C /* News.css in Resources */ = {isa = PBXBuildFile; fileRef = 04066A441F26F75B0090DE0C /* News.css */; };
 		04066A471F26F75B0090DE0C /* NewsInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04066A451F26F75B0090DE0C /* NewsInfo.plist */; };
+		04066A491F272B380090DE0C /* 说明.m in Sources */ = {isa = PBXBuildFile; fileRef = 04066A481F272B380090DE0C /* 说明.m */; };
 		A94396A478DA796E46690AF1 /* libPods-JXLovePlayNews.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2434FB00B553088FF3E33DE8 /* libPods-JXLovePlayNews.a */; };
 /* End PBXBuildFile section */
 
@@ -114,6 +115,7 @@
 		04066A411F26F5680090DE0C /* LPNewsListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPNewsListController.m; sourceTree = "<group>"; };
 		04066A441F26F75B0090DE0C /* News.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = News.css; sourceTree = "<group>"; };
 		04066A451F26F75B0090DE0C /* NewsInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = NewsInfo.plist; sourceTree = "<group>"; };
+		04066A481F272B380090DE0C /* 说明.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "说明.m"; sourceTree = "<group>"; };
 		2434FB00B553088FF3E33DE8 /* libPods-JXLovePlayNews.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JXLovePlayNews.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B7E325F44B923F82386E7A7 /* Pods-JXLovePlayNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JXLovePlayNews.release.xcconfig"; path = "Pods/Target Support Files/Pods-JXLovePlayNews/Pods-JXLovePlayNews.release.xcconfig"; sourceTree = "<group>"; };
 		E1F7BB4332FA16E9F56DA599 /* Pods-JXLovePlayNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JXLovePlayNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JXLovePlayNews/Pods-JXLovePlayNews.debug.xcconfig"; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 		040669CC1F26E68E0090DE0C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				04066A481F272B380090DE0C /* 说明.m */,
 				040669CD1F26E68E0090DE0C /* Category */,
 				04066A011F26E68F0090DE0C /* Common.h */,
 			);
@@ -652,6 +655,7 @@
 				04066A311F26E68F0090DE0C /* UIImage+TYLaunchImage.m in Sources */,
 				04066A391F26E68F0090DE0C /* LPADLaunchView.m in Sources */,
 				040669B61F26E6410090DE0C /* main.m in Sources */,
+				04066A491F272B380090DE0C /* 说明.m in Sources */,
 				04066A2B1F26E68F0090DE0C /* UIBarButtonItem+Item.m in Sources */,
 				04066A231F26E68F0090DE0C /* NSDate+Compare.m in Sources */,
 				04066A291F26E68F0090DE0C /* NSDictionary+Params.m in Sources */,
