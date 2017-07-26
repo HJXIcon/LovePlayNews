@@ -6,7 +6,7 @@
 //  Copyright © 2017年 JXIcon. All rights reserved.
 //
 
-#import <Texture/AsyncDisplayKit/ASViewController.h>
+#import <AsyncDisplayKit/AsyncDisplayKit.h>
 
 @interface LPNewsListController : ASViewController
 

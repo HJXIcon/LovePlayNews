@@ -1,10 +1,12 @@
 
 
 /// 详情页展示逻辑
-1.加载数据  // http://i.play.163.com/news/appDetail//CQ6JQ3HJ00318QAR
-2.article模型中的img数组替换article模型中的body中的图片标签数组（<!--IMG#0--><p>）
-3.创建带有WebView的cell展示HTML
-4.加载本地CSS文件，拼接完整的HTML，然后加载html
+
+//1.加载数据  // http://i.play.163.com/news/appDetail//CQ6JQ3HJ00318QAR
+//2.article模型中的img数组替换article模型中的body中的图片标签数组（<!--IMG#0--><p>）
+//3.创建带有WebView的cell展示HTML
+//4.加载本地CSS文件，拼接完整的HTML，然后加载html
+
 /// ******* 拼接之前
 /**!
 

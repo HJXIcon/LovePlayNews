@@ -20,5 +20,7 @@ pod 'MXParallaxHeader', '~> 0.6.1'
 pod 'TYPagerController', '~> 1.0.2'
 pod 'TYAttributedLabel', '~> 2.6.2'
 pod 'JPFPSStatus', '~> 0.1'
+pod 'MJRefresh', '~> 3.1.12'
+pod 'MJExtension', '~> 3.0.13'
 
 end

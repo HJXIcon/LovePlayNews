@@ -11,8 +11,12 @@
 #define JXLovePlayNews_pch
 
 #import <AFNetworking.h>
-#import <PPNetworkHelper/PPNetworkCache.h>
+#import <PPNetworkHelper/PPNetworkHelper.h>
+#import <YYWebImage.h>
 #import "Common.h"
+#import "Class_Basic.h"
+#import "LPRequestURLInfo.h"
+#import <MJExtension/MJExtension.h>
 
 
 
