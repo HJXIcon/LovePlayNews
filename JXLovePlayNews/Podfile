@@ -22,5 +22,7 @@ pod 'TYAttributedLabel', '~> 2.6.2'
 pod 'JPFPSStatus', '~> 0.1'
 pod 'MJRefresh', '~> 3.1.12'
 pod 'MJExtension', '~> 3.0.13'
+pod 'CocoaLumberjack', '~> 3.2.0' #适用于Mac和iOS的快速简单但功能强大且灵活的日志框架
+pod 'MLeaksFinder', '~> 0.2.1' #在开发时，在iOS应用程序中查找内存泄漏。
 
 end

@@ -17,7 +17,7 @@
 #import "Class_Basic.h"
 #import "LPRequestURLInfo.h"
 #import <MJExtension/MJExtension.h>
-
+#import <Texture/AsyncDisplayKit/ASDisplayNode.h>
 
 
 #endif /* JXLovePlayNews_pch */

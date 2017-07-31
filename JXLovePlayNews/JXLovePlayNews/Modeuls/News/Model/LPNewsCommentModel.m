@@ -8,9 +8,8 @@
 
 #import "LPNewsCommentModel.h"
 
+
 @implementation LPNewsCommentModel
-
-
 
 
 @end

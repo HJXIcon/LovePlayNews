@@ -20,8 +20,10 @@
 #endif
 
 // 弱引用
-#define WEAK_REF(obj)\
-__weak typeof(obj) weak_##obj = obj; \
+// 强引用
+#define LPWeakSelf(type)  __weak typeof(type) weak##type = type;
+#define LPStrongSelf(type)  __strong typeof(type) type = weak##type;
+
 
 //是否ios7以上系统
 #define kIsIOS7Later ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)

@@ -9,7 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "LPNewsCommentModel.h"
 
-@class LPNewsArticleModel;
+
+@class LPNewsArticleModel,LPNewsDetailImgeInfo,LPNewsFavorInfo;
 @interface LPNewsDetailModel : NSObject
 
 @property (nonatomic, strong) LPNewsArticleModel *article;
@@ -19,17 +20,17 @@
 
 @interface LPNewsArticleModel : NSObject
 
-@property (nonatomic, strong) NSString *articleUrl;
-@property (nonatomic, strong) NSString *body;
+@property (nonatomic, strong) NSString *articleUrl; //
+@property (nonatomic, strong) NSString *body; // html的body
 @property (nonatomic, strong) NSString *digest;
 @property (nonatomic, strong) NSString *docid;
-@property (nonatomic, strong) NSArray *img;
+@property (nonatomic, strong) NSArray <LPNewsDetailImgeInfo *>*img;
 @property (nonatomic, strong) NSString *ptime;
 @property (nonatomic, assign) NSInteger replyCount;
 @property (nonatomic, strong) NSString *shareLink;
 @property (nonatomic, strong) NSString *source;
 @property (nonatomic, strong) NSString *title;
-@property (nonatomic, strong) NSArray *relative_sys;
+@property (nonatomic, strong) NSArray <LPNewsFavorInfo *>*relative_sys;
 
 @end
 

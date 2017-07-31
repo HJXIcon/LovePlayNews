@@ -10,6 +10,16 @@
 #import "LPTabBarController.h"
 #import "LPADLaunchController.h"
 #import <JPFPSStatus.h>
+#import <CocoaLumberjack/CocoaLumberjack.h>
+#import <CocoaLumberjack/DDTTYLogger.h>
+
+//!!DDLog 必须配置打印级别
+#ifdef DEBUG
+static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
+#else
+static const DDLogLevel ddLogLevel = DDLogLevelWarning;
+#endif
+
 
 @interface AppDelegate ()
 
@@ -27,7 +37,54 @@
     
 #if defined(DEBUG)||defined(_DEBUG)
     [[JPFPSStatus sharedInstance] open];
+    
 #endif
+    
+    
+    /**！
+     1.@DDLog（整个框架的基础）
+     2.@DDASLLogger（发送日志语句到苹果的日志系统，以便它们显示在Console.app上）
+     3.@DDTTYLoyger（发送日志语句到Xcode控制台，如果可用）
+     4.@DDFIleLoger（把日志语句发送至文件）
+     */
+    
+    
+    //开启使用 XcodeColors
+    setenv("XcodeColors", "YES", 0);
+    
+    //检测
+    char *xcode_colors = getenv("XcodeColors");
+    if (xcode_colors && (strcmp(xcode_colors, "YES") == 0))
+    {
+        // XcodeColors is installed and enabled!
+        NSLog(@"XcodeColors is installed and enabled");
+    }
+    //开启DDLog 颜色
+    [[DDTTYLogger sharedInstance] setColorsEnabled:YES];
+    [[DDTTYLogger sharedInstance] setForegroundColor:[UIColor blueColor] backgroundColor:nil forFlag:DDLogFlagVerbose];
+    
+    //配置DDLog
+    [DDLog addLogger:[DDTTYLogger sharedInstance]]; // TTY = Xcode console
+    [DDLog addLogger:[DDASLLogger sharedInstance]]; // ASL = Apple System Logs
+    
+    DDFileLogger *fileLogger = [[DDFileLogger alloc] init]; // File Logger
+    fileLogger.rollingFrequency = 60 * 60 * 24; // 24 hour rolling
+    fileLogger.logFileManager.maximumNumberOfLogFiles = 7;
+    [DDLog addLogger:fileLogger];
+    
+    //针对单个文件配置DDLog打印级别，尚未测试
+    //    [DDLog setLevel:DDLogLevelAll forClass:nil];
+    
+    NSLog(@"NSLog");
+    DDLogVerbose(@"Verbose");
+    DDLogDebug(@"Debug");
+    DDLogInfo(@"Info");
+    DDLogWarn(@"Warn");
+    DDLogError(@"Error");
+    
+    DDLogError(NSHomeDirectory());
+    
+    
     
     return YES;
 }

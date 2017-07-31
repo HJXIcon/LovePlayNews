@@ -53,10 +53,29 @@
 }
 
 
-+ (void)requestNewsDetailWithNewsId:(NSString *)newsId
-{
-    NSString *URLString = [NSString stringWithFormat:@"%@/%@",NewsDetailURL,newsId];
++ (void)requestNewsDetailWithNewsId:(NSString *)newsId completion:(void(^)(LPNewsDetailModel *))completion{
+    
+
+    NSString *URLString = [NSString stringWithFormat:@"%@%@/%@",BaseURL,NewsDetailURL,newsId];
      NSDictionary *parameters = @{@"tieVersion":@"v2",@"platform":@"ios",@"width":@(kScreenWidth*2),@"height":@(kScreenHeight*2),@"decimal":@"75"};
+    
+    
+    [PPNetworkHelper GET:URLString parameters:parameters success:^(id responseObject) {
+        
+        if ([responseObject[@"code"] intValue] == 0) {
+            LPNewsDetailModel *detail = [LPNewsDetailModel mj_objectWithKeyValues:responseObject[@"info"]];
+              completion(detail);
+            
+        }else{
+              completion(nil);
+        }
+        
+        
+    } failure:^(NSError *error) {
+        
+        completion(nil);
+        
+    }];
     
     
 }

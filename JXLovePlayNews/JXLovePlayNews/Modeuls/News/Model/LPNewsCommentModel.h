@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+@class LPNewsCommentItem;
 @interface LPNewsCommentModel : NSObject
 @property (nonatomic, strong) NSArray *commentIds;
 @property (nonatomic, strong) NSDictionary *comments;

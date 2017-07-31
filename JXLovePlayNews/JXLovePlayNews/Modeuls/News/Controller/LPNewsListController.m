@@ -15,6 +15,7 @@
 #import "LPNewsImageCellNode.h"
 #import "LPNewsCellNode.h"
 #import "LPNewsViewModel.h"
+#import "LPNewsDetailController.h"
 
 
 @interface LPNewsListController ()<ASTableDelegate,ASTableDataSource>
@@ -264,9 +265,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     LPNewsInfoModel *newsInfo = _newsList[indexPath.row];
-//    LPNewsDetailController *detail = [[LPNewsDetailController alloc]init];
-//    detail.newsId = newsInfo.docid;
-//    [self.navigationController pushViewController:detail animated:YES];
+    LPNewsDetailController *detail = [[LPNewsDetailController alloc]init];
+    detail.newsId = newsInfo.docid;
+    [self.navigationController pushViewController:detail animated:YES];
 }
 
 

@@ -15,6 +15,6 @@
 
 + (void)requestNewsListWithTopId:(NSString *)topId pageIndex:(NSInteger)pageIndex completion:(void(^)(NSArray <LPNewsInfoModel *>*modelArray))completion;
 
-
++ (void)requestNewsDetailWithNewsId:(NSString *)newsId completion:(void(^)(LPNewsDetailModel *))completion;
 
 @end
