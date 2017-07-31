@@ -56,6 +56,7 @@
 		044096441F2ECEEF00C3742A /* LPNewsFavorCellNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 044096431F2ECEEF00C3742A /* LPNewsFavorCellNode.m */; };
 		044096471F2ECF0A00C3742A /* LPNewsBreifCellNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 044096461F2ECF0A00C3742A /* LPNewsBreifCellNode.m */; };
 		0440964B1F2ECF6B00C3742A /* LPWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0440964A1F2ECF6B00C3742A /* LPWebViewController.m */; };
+		0440964E1F2F1AD300C3742A /* 新闻详情说明.m in Sources */ = {isa = PBXBuildFile; fileRef = 0440964D1F2F1AD300C3742A /* 新闻详情说明.m */; };
 		046E599C1F28251E0067B1B7 /* LPRefreshGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 046E599B1F28251E0067B1B7 /* LPRefreshGifHeader.m */; };
 		046E599F1F2827B00067B1B7 /* LPNewsInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 046E599E1F2827B00067B1B7 /* LPNewsInfoModel.m */; };
 		046E59A21F2827EC0067B1B7 /* LPNewsBaseCellNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 046E59A11F2827EC0067B1B7 /* LPNewsBaseCellNode.m */; };
@@ -139,7 +140,7 @@
 		04066A411F26F5680090DE0C /* LPNewsListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPNewsListController.m; sourceTree = "<group>"; };
 		04066A441F26F75B0090DE0C /* News.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = News.css; sourceTree = "<group>"; };
 		04066A451F26F75B0090DE0C /* NewsInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = NewsInfo.plist; sourceTree = "<group>"; };
-		04066A481F272B380090DE0C /* 说明.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "说明.m"; sourceTree = "<group>"; };
+		04066A481F272B380090DE0C /* 说明.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "说明.m"; path = "../Modeuls/Common/说明.m"; sourceTree = "<group>"; };
 		044096201F2EC39C00C3742A /* LPNewsDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPNewsDetailController.h; sourceTree = "<group>"; };
 		044096211F2EC39C00C3742A /* LPNewsDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPNewsDetailController.m; sourceTree = "<group>"; };
 		044096231F2EC45300C3742A /* LPNewsTitleHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPNewsTitleHeaderView.h; sourceTree = "<group>"; };
@@ -168,6 +169,7 @@
 		044096461F2ECF0A00C3742A /* LPNewsBreifCellNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPNewsBreifCellNode.m; sourceTree = "<group>"; };
 		044096491F2ECF6B00C3742A /* LPWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPWebViewController.h; sourceTree = "<group>"; };
 		0440964A1F2ECF6B00C3742A /* LPWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPWebViewController.m; sourceTree = "<group>"; };
+		0440964D1F2F1AD300C3742A /* 新闻详情说明.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "新闻详情说明.m"; sourceTree = "<group>"; };
 		046E599A1F28251E0067B1B7 /* LPRefreshGifHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPRefreshGifHeader.h; sourceTree = "<group>"; };
 		046E599B1F28251E0067B1B7 /* LPRefreshGifHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPRefreshGifHeader.m; sourceTree = "<group>"; };
 		046E599D1F2827B00067B1B7 /* LPNewsInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPNewsInfoModel.h; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 		040669B31F26E6410090DE0C /* JXLovePlayNews */ = {
 			isa = PBXGroup;
 			children = (
+				0440964C1F2F1AA600C3742A /* 效果图 */,
 				040669CB1F26E68E0090DE0C /* Modeuls */,
 				040669B71F26E6410090DE0C /* AppDelegate.h */,
 				040669B81F26E6410090DE0C /* AppDelegate.m */,
@@ -274,7 +277,6 @@
 				044096481F2ECF4C00C3742A /* Controller */,
 				046E59BF1F283C740067B1B7 /* Header */,
 				046E59991F2824FA0067B1B7 /* View */,
-				04066A481F272B380090DE0C /* 说明.m */,
 				040669CD1F26E68E0090DE0C /* Category */,
 			);
 			path = Common;
@@ -629,6 +631,15 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		0440964C1F2F1AA600C3742A /* 效果图 */ = {
+			isa = PBXGroup;
+			children = (
+				04066A481F272B380090DE0C /* 说明.m */,
+				0440964D1F2F1AD300C3742A /* 新闻详情说明.m */,
+			);
+			path = "效果图";
+			sourceTree = "<group>";
+		};
 		046E59991F2824FA0067B1B7 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -835,6 +846,7 @@
 				0440963E1F2ECD6D00C3742A /* LPNewsReplyNode.m in Sources */,
 				044096221F2EC39C00C3742A /* LPNewsDetailController.m in Sources */,
 				046E59AC1F2838320067B1B7 /* LPNewsImageCellNode.m in Sources */,
+				0440964E1F2F1AD300C3742A /* 新闻详情说明.m in Sources */,
 				04066A311F26E68F0090DE0C /* UIImage+TYLaunchImage.m in Sources */,
 				04066A391F26E68F0090DE0C /* LPADLaunchView.m in Sources */,
 				040669B61F26E6410090DE0C /* main.m in Sources */,
