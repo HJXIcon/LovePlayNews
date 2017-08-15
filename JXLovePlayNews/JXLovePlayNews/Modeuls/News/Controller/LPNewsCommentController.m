@@ -11,6 +11,7 @@
 #import "LPNewsTitleSectionView.h"
 #import "LPLoadingView.h"
 #import "LPLoadFailedView.h"
+#import "LPNewsViewModel.h"
 
 @interface LPNewsCommentController ()<ASTableDelegate, ASTableDataSource>
 
@@ -85,10 +86,18 @@ static NSString *headerId = @"LPNewsTitleSectionView";
 - (void)loadData
 {
     [LPLoadingView showLoadingInView:self.view];
-   
+    
+    LPWeakSelf(self);
+    [LPNewsViewModel requestHotCommentWithNewsId:_newsId completion:^(LPNewsCommentModel *model) {
+        LPStrongSelf(self);
+        self.hotComments = model;
+    }];
+    
+#warning TODO:请求评论数
     
     _curIndexPage = 0;
     _haveMore = YES;
+    
 }
 
 - (void)loadMoreDataWithContext:(ASBatchContext *)context

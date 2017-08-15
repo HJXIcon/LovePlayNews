@@ -81,4 +81,33 @@
 }
 
 
++ (void)requestHotCommentWithNewsId:(NSString *)newsId completion:(void(^)(LPNewsCommentModel *))completion{
+    
+    NSString *urlString = [NSString stringWithFormat:@"%@%@%@/0/10/11/2/2",BaseURL,HotGameCommentURL,newsId];
+    
+    
+    [PPNetworkHelper GET:urlString parameters:nil success:^(id responseObject) {
+        
+        if ([responseObject[@"code"] intValue] == 0) {
+            LPNewsCommentModel *model = [LPNewsCommentModel mj_objectWithKeyValues:responseObject];
+            completion(model);
+            
+        }else{
+            completion(nil);
+        }
+        
+        
+    } failure:^(NSError *error) {
+        
+        completion(nil);
+        
+    }];
+    
+}
+
++ (void)requestNewCommentWithNewsId:(NSString *)newsId pageIndex:(NSInteger)pageIndex pageSize:(NSInteger)pageSize{
+    
+}
+
+
 @end
